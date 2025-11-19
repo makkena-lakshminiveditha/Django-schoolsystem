@@ -1,0 +1,79 @@
+body {
+    background-image: url('https://www.shutterstock.com/shutterstock/photos/1908794089/display_1500/stock-photo-academic-concept-smiling-junior-asian-school-girl-sitting-at-desk-in-classroom-writing-in-1908794089.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    width: 30vw;
+    background: rgba(241, 38, 15, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin: 60px auto;
+    padding: 25px 35px;
+    margin-top: 150px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 8px 0;
+    gap: 6px; 
+}
+
+form label {
+    width: 32%;
+    font-weight: 600;
+    color:black;
+    font-size: 15px;
+    text-align: right;
+    margin-right: 10px;
+}
+input:hover{
+    background-color: aliceblue;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+input, select {
+    width: 45%;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;   
+    margin-top: 20px;
+}
+
+button {
+    background-color: lightcyan;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    width: 120px;
+    height: 38px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: lightgrey;
+}

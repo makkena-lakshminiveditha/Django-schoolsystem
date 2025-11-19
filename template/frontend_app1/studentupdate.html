@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student Details</title>
+    <link rel="stylesheet" href="{% static 'CSS/studentupdate.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Update Student Details</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="btn-group">
+                <a href="{% url 'mystudents' %}">
+                    <button type="button" class="btn back-btn">Back</button>
+                </a>
+                <button type="submit" class="btn submit-btn">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

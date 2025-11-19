@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/studenttable.css' %}">
+</head>
+<body>
+    <h1>Student Record Management</h1>
+    <div class="main-container">
+        <table border="2">
+            <tr>
+                <th>Student_id</th>
+                <th>StudentName</th>
+                <th>FatherName</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            {% for x in student %}
+            <tr>
+                <td>{{x.Student_id}}</td>
+                <td>{{x.StudentName}}</td>
+                <td>{{x.FatherName}}</td>
+                <td>{{x.Age}}</td>
+                <td>{{x.Grade}}</td>
+                <td>{{x.Email}}</td>
+                <td>{{x.Phone}}</td>
+                <td>
+                    <a href="{% url 'studentupdate' x.id %}">Edit</a>
+                </td>
+                <td>
+                    <a href="{% url 'studentdelete' x.id %}" onclick="return confirm('are sure to delete data')" style="text-decoration: none;">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div>
+            <a href="{% url 'mystudentform'%}"><button class="btn1">Add New Student</button></a>
+            <a href="{% url 'myhomepage' %}"><button class="btn2">Homepage</button></a>
+        </div>
+    </div>
+</body>
+</html>

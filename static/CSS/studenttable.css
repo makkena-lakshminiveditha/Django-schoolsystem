@@ -1,0 +1,73 @@
+body{
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20241207/pngtree-management-in-the-education-system-concept-a-colorful-background-with-stack-image_16752149.jpg');
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 350px;
+}
+table{
+    width: 85vw;
+    height: 30vh;
+    margin-top: 10px;  
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(9, 185, 62, 0.15); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn1,.btn2{
+    background: rgba(201, 13, 13, 0.15); 
+    height: 30px;
+    width: 250px;
+    border: none;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 500;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-top: 40px;
+    margin-right: 40px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+.btn2:hover{
+    color: red;
+    font-weight: 600;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+.btn1:hover{
+    color:red;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-bottom: 60px;
+}
+
+a {
+    text-decoration: none;
+    color:lawngreen; 
+    font-weight: 500;
+}
+
+a:hover {
+    color: aqua;
+    text-decoration: none;
+    font-weight: 600;
+}

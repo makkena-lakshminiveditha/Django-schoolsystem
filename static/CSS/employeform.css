@@ -1,0 +1,91 @@
+body {
+    background-image: url('https://thumbs.dreamstime.com/b/teacher-students-classroom-teaching-58888092.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    width: 420px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.form-box p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #000;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    height: 34px;
+    border: none;
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.btn-submit {
+    background-color: rgba(0, 255, 150, 0.6);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: rgba(0, 255, 150, 0.9);
+}
+
+.btn-back {
+    background-color: rgba(255, 100, 100, 0.6);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background-color: rgba(255, 80, 80, 0.8);
+}

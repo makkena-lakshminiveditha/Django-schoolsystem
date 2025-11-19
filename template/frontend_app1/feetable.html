@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Details</title>
+    <link rel="stylesheet" href="{% static 'CSS/feetable.css' %}">
+</head>
+<body>
+    <h1>Fee Management</h1>
+    <div class="main-container">
+        <table border="2">
+            <tr>
+                <th>Fee ID</th>
+                <th>Student Name</th>
+                <th>Total Fee</th>
+                <th>Amount Paid</th>
+                <th>Pending Fee</th>
+                <th>Payment Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            {% for x in fee %}
+            <tr>
+                <td>{{x.Fee_id}}</td>
+                <td>{{x.StudentName}}</td>
+                <td>{{x.Total_fee}}</td>
+                <td>{{x.Amount_paid}}</td>
+                <td>{{x.Pnding_fee}}</td>
+                <td>{{x.Payment_date}}</td>
+                <td><a href="{% url 'feeupdate' x.id %}">Edit</a></td>
+                <td><a href="{% url 'feedelete' x.id %}" onclick="return confirm('are sure to delete data')">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <div class="btn-container">
+            <a href="{% url 'myfeeform' %}"><button class="btn1">Add Fee Details</button></a>
+            <a href="{% url 'myhomepage' %}"><button class="btn2">Homepage</button></a>
+        </div>
+    </div>
+</body>
+</html>

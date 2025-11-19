@@ -1,0 +1,93 @@
+
+body {
+    background-image: url('https://img.freepik.com/premium-photo/back-school-school-backgrounds_551707-112743.jpg?semt=ais_hybrid&w=740&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    width: 420px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.form-box p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: #000;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    height: 34px;
+    border: none;
+    border-radius: 6px;
+    padding-left: 10px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.btn-submit {
+    background-color: rgba(0, 255, 150, 0.6);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #000;
+}
+
+.btn-submit:hover {
+    background-color: rgba(0, 255, 150, 0.9);
+}
+
+.btn-back {
+    background-color: rgba(255, 100, 100, 0.6);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background-color: rgba(255, 80, 80, 0.8);
+}

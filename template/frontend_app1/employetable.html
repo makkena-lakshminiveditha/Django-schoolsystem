@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Record Management</title>
+    <link rel="stylesheet" href="{% static 'CSS/employetable.css' %}">
+</head>
+<body>
+    <h1>Employee Record Management</h1>
+
+    <div class="main-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Teacher ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Subject</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Salary</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in Teacher %}
+                <tr>
+                    <td>{{ x.teacher_id }}</td>
+                    <td>{{ x.Name }}</td>
+                    <td>{{ x.Age }}</td>
+                    <td>{{ x.Subject }}</td>
+                    <td>{{ x.Email }}</td>
+                    <td>{{ x.Phone }}</td>
+                    <td>{{ x.Salary }}</td>
+                    <td><a href="{% url 'employeupdate' x.id %}">Edit</a></td>
+                    <td><a href="{% url 'employedelete' x.id %}" onclick="return confirm('are sure to delete data')">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="button-container">
+            <a href="{% url 'myemployeform' %}">
+                <button class="btn1">Add Teacher Data</button>
+            </a>
+            <a href="{% url 'myhomepage' %}">
+                <button class="btn2">Homepage</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
