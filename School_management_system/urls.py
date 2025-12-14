@@ -19,10 +19,13 @@ from django.urls import path
 from app1.views import home_page,Student_Details,Student_form,Student_update_data,Student_delete_data
 from app1.views import Employes_Details,Employe_form,Employe_update_data,Employe_delete_data
 from app1.views import fee_Details,Fee_form,Fee_update_data,Fee_delete_data
+from app1.views import registration_form,login_form
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home_page,name='myhomepage'),
+    path('',registration_form,name ='regi101'),
+    path('login1',login_form,name = 'login101'),
+    path('home101',home_page,name='myhomepage'),
     path('students/',Student_Details,name='mystudents'),
     path('studentform/',Student_form,name = 'mystudentform'),
     path('update/<int:id>/',Student_update_data,name='studentupdate'),

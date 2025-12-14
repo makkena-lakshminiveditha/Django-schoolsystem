@@ -9,6 +9,48 @@ from app1.formfee1 import Fee_details_form
 from app1.formfeeupdate import Fee_update_form
 
 # Create your views here.
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
+def registration_form(request):
+    message = ''
+    if request.method == 'POST':
+        user_name = request.POST.get('username')
+        user_email = request.POST.get('useremail')
+        user_password = request.POST.get('userpassword')
+        user_repassword = request.POST.get('reuserpassword')
+
+        if user_password != user_repassword:
+            message = 'Passwords do not match'
+        elif User.objects.filter(email=user_email).exists():
+            message = 'User already exists'
+        else:
+            user = User.objects.create_user(
+                username=user_name,
+                email=user_email,
+                password=user_password
+            )
+            user.save()
+            return redirect('login101')
+
+    return render(request, 'frontend_app1/register.html', {'message': message})
+def login_form(request):
+    message = ''
+    if request.method == 'POST':
+        username = request.POST.get('login_name')
+        password = request.POST.get('login_password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            message = 'login Succesfully'
+            return redirect('myhomepage')   
+        else:
+            message = 'Invalid username or password'
+
+    return render(request, 'frontend_app1/login1.html', {'message': message})
+
+#-------------------------------------------HOME---------------------------------------------------
 def home_page(request):
     return render(request,'frontend_app1/home.html')
 

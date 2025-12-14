@@ -1,0 +1,127 @@
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/register.css' %}">
+</head>
+<body>
+    <p>{{ message }}</p>
+    <h1>Registration Form</h1>
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+        <table>
+            <tr>
+               <td>
+                    <input type="text" placeholder="enter your name" name = 'username' required>
+               </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="email" placeholder="enter your email" name = 'useremail' required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" placeholder="enter password" name = 'userpassword' required autocomplete="off">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" placeholder="re-enter password" name = 'reuserpassword' required>
+                </td>
+            </tr>
+        </table>
+        <p>Alredy you have Account <a href="{%url 'login101'%}">login</a></p>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html> 
+ -->
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'CSS/register.css' %}">
+</head>
+<body>
+
+<div class="card">
+    <h1>Register</h1>
+    <p class="subtitle">Kindly fill in this form to register.</p>
+
+    {% if message %}
+        <p class="error">{{ message }}</p>
+    {% endif %}
+
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+
+        <label>Username</label>
+        <input type="text" placeholder="Enter username" name="username" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter email" name="useremail" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" name="userpassword" required>
+
+        <label>Repeat Password</label>
+        <input type="password" placeholder="Repeat password" name="reuserpassword" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p class="login-text">
+        Already have an account?
+        <a href="{% url 'login101' %}">Log in</a>
+    </p>
+</div>
+</body>
+</html> -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'CSS/register.css' %}">
+</head>
+<body>
+
+<div class="card">
+    <h1>Register</h1>
+    <p class="subtitle">Kindly fill in this form to register.</p>
+
+    {% if message %}
+        <p class="error">{{ message }}</p>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <label>Username :</label>
+        <input type="text" placeholder="Username" name="username" required>
+        <label>Email :</label>
+        <input type="email" placeholder="Email" name="useremail" required>
+        <label>Password :</label>
+        <input type="password" placeholder="Password" name="userpassword" required>
+        <label>Conform Password :</label>
+        <input type="password" placeholder="conform Password" name="reuserpassword" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p class="login-text">
+        Already have an account?
+        <a href="{% url 'login101' %}">Log in</a>
+    </p>
+</div>
+</body>
+</html>
